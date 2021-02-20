@@ -1,0 +1,21 @@
+1) SELECT id, codes, new, title, price, pages FROM computer
+2) SELECT * FROM computer
+3) SELECT codes,title,new,pages,price,id FROM computer
+4) SELECT * FROM computer LIMIT 10
+5)---------------------------------------------------------------------------------------------
+6)SELECT DISTINCT codes FROM computer
+7)SELECT title, new FROM computer WHERE new LIKE 'Yes'
+8)SELECT title,  new, price FROM computer WHERE new LIKE 'Yes' AND price >= 20 AND price <= 30
+9)SELECT title, new, price FROM computer WHERE new LIKE 'Yes' AND (price >= 20 OR price <= 30)
+10)SELECT title, pages, price FROM computer WHERE pages>=300 AND pages<=400 AND price >= 20 OR price <= 30
+11)SELECT title, dates FROM computer WHERE (dates >= '2000-01-01' AND dates <= '2000-02-28') OR (dates >= '2000-12-01' AND '2000-12-31')
+12)SELECT title, codes FROM computer WHERE codes = 5110 OR codes = 5141 OR codes = 4985 OR codes = 4241
+13)SELECT title, codes FROM computer WHERE Year(dates) = 1999 OR Year(dates) = 2001 OR Year(dates) = 2003 OR Year(dates) = 2005
+14)SELECT title FROM computer WHERE title >= 'À' AND title <= 'Ê'
+15)SELECT title,price,dates FROM  computer WHERE title LIKE 'ÀÏÏ%' AND price<=20 AND Year(dates) = '2000'
+16)SELECT  title, dates FROM computer WHERE title LIKE 'ÀÏÏ%å' AND MONTH(dates)>=6
+17)SELECT title FROM computer Where title LIKE '%Microsoft%' AND title NOT LIKE '%Windows%'
+18)SELECT title FROM computer WHERE title LIKE '%0%' OR title LIKE '%1%' OR title LIKE '%2%' OR title LIKE '%3%' OR title LIKE '%4%' OR title LIKE '%5%' OR title LIKE '%6%' OR title LIKE '%7%' OR title LIKE '%8%' OR title LIKE '%9%'
+18)(1)SELECT title FROM computer WHERE title REGEXP '[[:digit:]]' = 1
+19)SELECT title FROM computer WHERE title REGEXP '[[:digit:]]{3}' = 1
+20)SELECT title FROM computer WHERE title REGEXP '[[:digit:]]{5}' = 1 AND title NOT REGEXP '[[:digit:]]{6}' = 1
